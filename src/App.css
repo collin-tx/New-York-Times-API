@@ -6,13 +6,11 @@ body {
   background-color: #343a40;
   text-align: center;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
 }
 
-ul {
-  padding:0;
+#books {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
 }
 
 .gradient {
@@ -43,8 +41,50 @@ li {
   display: flex !important;
   justify-content: space-between;
   align-items: center;
+  flex-direction: column;
 }
 
 li b {
   width: 100%;
+}
+
+img {
+  width: 200px;
+  height: 300px;
+}
+
+.book {
+  background: whitesmoke;
+  width: 330px;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 5px;
+  justify-self: center;
+}
+
+@media(max-width: 1080px){
+ .book {
+    justify-self: center;
+  }
+
+
+  #books {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 740px){
+  #books {
+    grid-template-columns: 1fr;
+  }
+
+  .book {
+    align-self: center;
+    justify-self: center;
+  }
+}
+
+.loading {
+  color: #fff;
+  font-size: 1rem;
 }

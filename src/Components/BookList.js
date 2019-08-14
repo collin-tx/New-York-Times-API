@@ -4,12 +4,12 @@ export default class BookList extends Component {
 	
 	render() {
 		return (
-			<li className="list-group-item text-left">
+			<div className="book">
 				<h2>{this.props.title}</h2>
 				<p>{this.props.author}</p>
 				<p>rank: {this.props.rank}</p>
 				<img src={this.props.img} />
-			</li>
+			</div>
 		);
 	}
 }
