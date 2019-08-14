@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ListItem from './Components/ListItems';
+import BookList from './Components/BookList';
 import './App.css';
 
 
@@ -28,9 +28,8 @@ export default class App extends Component {
 	render() {
 		const allBooks = this.state.data.results && this.state.data.results.books.map(book => {
 			return (
-				<li>
-					<h2>{book.title}</h2>
-				</li>
+				<BookList title={book.title} key={book.rank} 
+				rank={book.rank} author={book.author} img={book.book_image} />
 			)
 		});
 		return (
