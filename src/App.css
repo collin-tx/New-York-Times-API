@@ -8,24 +8,6 @@ body {
   min-height: 100vh;
 }
 
-#books {
- display: grid;
- grid-template-columns: repeat(3, 1fr);
-}
-
-.gradient {
-    border-radius: 8px;
-}
-
-.fa {
-  cursor: pointer;
-  padding-left: 3px;
-}
-.card-img-top {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
 
 main {
   max-width: 1200px;
@@ -53,6 +35,11 @@ img {
   height: 300px;
 }
 
+.books {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+ }
+
 .book {
   background: whitesmoke;
   width: 330px;
@@ -68,13 +55,13 @@ img {
   }
 
 
-  #books {
+  .books {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media (max-width: 740px){
-  #books {
+  .books {
     grid-template-columns: 1fr;
   }
 
