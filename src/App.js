@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import BookList from './Components/BookList';
 import Articles from './Components/Articles';
 import Fiction from './Components/Fiction';
 import './App.css';

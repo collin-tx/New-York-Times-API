@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import BookList from './BookList';
+import NonfictionBooks from './NonfictionBooks';
 
 export class Nonfiction extends Component {
     state = {
@@ -31,7 +31,7 @@ export class Nonfiction extends Component {
     render() {
         const allBooks = this.state.data.results && this.state.data.results.books.map(book => {
 			return (
-				<BookList title={book.title} key={book.rank} 
+				<NonfictionBooks title={book.title} key={book.rank} 
 				rank={book.rank} author={book.author} img={book.book_image} />
 			)
 		});
