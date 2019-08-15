@@ -20,7 +20,7 @@ export default class App extends Component {
 					<Articles />
 				</div>
 				<div>
-					<h2 className="text-light mt-3">Books from the best-sellers list</h2>
+					<h2 className="text-light mt-5">Books from the best-sellers list</h2>
 					<h3 className="text-light m-5">Nonfiction</h3>
 					<Nonfiction />
 					<h3 className="text-light m-5">Fiction</h3>

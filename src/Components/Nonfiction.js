@@ -32,7 +32,7 @@ export class Nonfiction extends Component {
         const allBooks = this.state.data.results && this.state.data.results.books.map(book => {
 			return (
 				<NonfictionBooks title={book.title} key={book.rank} 
-				rank={book.rank} author={book.author} img={book.book_image} />
+				rank={book.rank} author={book.author} img={book.book_image} link={book.buy_links[0].url} />
 			)
 		});
         return (
