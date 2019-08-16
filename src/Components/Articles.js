@@ -14,11 +14,18 @@ export class Articles extends Component {
    }
 
    handleSubmit = (e) => {
-       e.preventDefault();
-       this.setState( () => {
-           return { loading: true }
-       });
-       this.getArticles();
+        e.preventDefault();
+        if (this.state.value){
+        this.setState( () => {
+            return { loading: true }
+        });
+        this.getArticles();
+    } else {
+        document.getElementById('userInput').classList.add('error');
+        setTimeout(function(){
+            document.getElementById('userInput').classList.remove('error');
+        }, 1200);
+    }
    }
 
    getArticles = () => {
@@ -44,7 +51,8 @@ export class Articles extends Component {
             <div id="articles">
                 <h2 className="text-light m-5">Search for NYT Articles</h2>
                 <form onSubmit={this.handleSubmit}>
-                    <input type="text" onChange={this.handleChange} value={this.state.value} placeholder="Search for an article..." />
+                    <input type="text" onChange={this.handleChange} value={this.state.value} 
+                    id='userInput' placeholder="Search for an article..." />
                     <button>Submit</button>
                 </form>
                 <div>
