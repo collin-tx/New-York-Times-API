@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Articles from './Components/Articles';
 import Fiction from './Components/Fiction';
-import './App.css';
 import Nonfiction from './Components/Nonfiction';
-
+import Header from './Components/Header';
+import './App.css';
 
 export default class App extends Component {
 	state = {
@@ -15,6 +15,7 @@ export default class App extends Component {
 	render() {
 		return (
 			<main className="p-5">
+				<Header />
 				<h1 className="text-light">{this.state.websiteName}</h1>
 				<div id="articles">
 					<Articles />

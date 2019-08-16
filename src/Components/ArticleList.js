@@ -9,7 +9,7 @@ export class ArticleList extends Component {
     
     render() {
         return (
-            <li className="list-group-item">
+            <li className="list-group-item article-list">
                 <h4>{this.props.title}</h4>
                 <p>{this.props.byLine}</p>
                 <b>{this.props.abstract}</b>
