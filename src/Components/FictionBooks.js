@@ -7,7 +7,7 @@ export class FictionBooks extends Component {
 				<h2>{this.props.title}</h2>
 				<p>{this.props.author}</p>
 				<p>rank: {this.props.rank}</p>
-				<img src={this.props.img} />
+				<img src={this.props.img}  alt={this.props.title + " book cover"} />
 			</div>
         )
     }

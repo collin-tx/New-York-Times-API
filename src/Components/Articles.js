@@ -43,9 +43,9 @@ export class Articles extends Component {
 
 
     render() {
-        const allArticles = this.state.data.response && this.state.data.response.docs.map(article => {
+        const allArticles = this.state.data.response && this.state.data.response.docs.map((article, index) => {
             return <ArticleList title={article.headline.main} byLine={article.byline.original} 
-            key={article.id} abstract={article.abstract} link={article.web_url} />
+            key={index} id={article.id} abstract={article.abstract} link={article.web_url} />
         });
         return (
             <div id="articles">
