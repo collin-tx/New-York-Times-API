@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import NonfictionBooks from './NonfictionBooks';
 
+const apiKey = process.env.REACT_APP_NYT_KEY;
+
 export class Nonfiction extends Component {
     state = {
         data: [],
@@ -17,7 +19,7 @@ export class Nonfiction extends Component {
 				loading: true
 			}
 		})
-		const url = `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-nonfiction.json?api-key=VIG56Dw6iVRhP7t27KAlHg9Hif6mSRg5`
+		const url = `https://api.nytimes.com/svc/books/v3/lists/current/hardcover-nonfiction.json?api-key=${apiKey}`
 		fetch(url).then(response => {
 			return response.json();
 		}).then(data => {
